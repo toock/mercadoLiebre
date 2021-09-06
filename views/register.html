@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <meta charset="UTF-8"> -->
+    <title>Bienvenidxs a MercadoLiebre</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="main-header">
+        <img
+          src="./images/logo-mercado-liebre.svg"
+          class="logo"
+          alt="Logo de MercadoLiebre"
+        />
+        <form class="form" action="#" methos="GET">
+          <input
+            type="text"
+            class="input"
+            placeholder="Buscar productos, marcas y más"
+          />
+          <!--<div class="input">Buscar productos, marcas y más</div>-->
+          <div class="submit"><i class="fa fa-search"></i></div>
+        </form>
+        <h2 class="copy-header">
+          <i class="fas fa-hand-holding-usd"></i>
+          Comprá en cuotas y sin tarjeta de crédito
+        </h2>
+      </div>
+      <a class="burger-menu">
+        <i class="fas fa-bars menuHam"></i>
+      </a>
+      <nav class="main-navbar">
+        <ul class="left-navbar">
+          <li><a href="#">Ofertas</a></li>
+          <li><a href="#">Tiendas Oficiales</a></li>
+          <li><a href="#">Vender</a></li>
+          <li><a href="#">Ayuda</a></li>
+        </ul>
+        <ul class="right-navbar">
+          <li>
+            <a href="/register"
+              >Creá tu cuenta <i class="fas fa-id-card"></i
+            ></a>
+          </li>
+          <li>
+            <a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a>
+          </li>
+          <li>
+            <a href="#">Mis compras <i class="fas fa-shopping-basket"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="banner">
+      <img
+        src="/images/img-home-banner.jpg"
+        width="100%"
+        alt="Banner de ofertas"
+      />
+    </section>
+    <main>
+      <form class="form-reg" action="" method="GET">
+        <section>
+          <h4>Datos de usuario</h4>
+          <label for="">Nombre y apellido</label>
+          <input type="text" minlength="4" name="" id="" required=true/>
+          <!-- Usuario -->
+          <label for="">Usuario</label>
+          <input type="text" name="" id="" />
+          <!-- Fecha de nacimiento -->
+          <label for="">Fecha de nacimiento</label>
+          <input type="date" name="" id="" />
+          <!-- Domicilio -->
+          <label for="">Domicilio</label>
+          <input type="text" src="" alt="" />
+          <!-- Perfil de usuario -->
+          <label for="">Perfil de usuario</label>
+          <input type="text" name="" id="" />
+        </section>
+        <section class="categoria">
+          <h4>Categoria de interes</h4>
+          <!-- categoria de interes -->
+          <input type="checkbox" name="" id="" />
+          <label for="">Electro</label><br>
+          <input type="checkbox" name="" id="" />
+          <label for="">Moda</label>
+          <br>
+          <input type="checkbox" name="" id="" />
+          <label for="">Hogar</label>
+          <br>
+          <input type="checkbox" name="" id="" />
+          <label for="">Juguete</label>
+          <br>
+          <input type="checkbox" name="" id="" />
+          <label for="">vida Sana</label>
+          <br>
+        </section>
+        <br>
+        <section>
+          <!-- Foto de usuario -->
+          <label for="">Foto</label>
+          <input type="file" src="" alt=""/>
+        </section>
+        <section>
+          <h4>Contraseña</h4>
+          <!-- Contraseña -->
+          <label for="">Password</label>
+          <input type="password" name="" id="" />
+          <!-- Confirmar contraseña -->
+          <label for="">Confirmar Password</label>
+          <input type="password" name="" id="" />
+        </section>
+        <br>
+        <!-- boton Enviar -->
+        <button type="submit">Enviar</button>
+        <!-- boton borrar -->
+        <button type="reset">Borrar</button>
+      </form>
+    </main>
+  </body>
+</html>
