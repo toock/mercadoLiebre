@@ -1,127 +1,220 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <!-- <meta charset="UTF-8"> -->
-    <title>Bienvenidxs a MercadoLiebre</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/styles.css" />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header>
-      <div class="main-header">
-        <img
-          src="./images/logo-mercado-liebre.svg"
-          class="logo"
-          alt="Logo de MercadoLiebre"
-        />
-        <form class="form" action="#" methos="GET">
-          <input
-            type="text"
-            class="input"
-            placeholder="Buscar productos, marcas y más"
-          />
-          <!--<div class="input">Buscar productos, marcas y más</div>-->
-          <div class="submit"><i class="fa fa-search"></i></div>
-        </form>
-        <h2 class="copy-header">
-          <i class="fas fa-hand-holding-usd"></i>
-          Comprá en cuotas y sin tarjeta de crédito
-        </h2>
-      </div>
-      <a class="burger-menu">
-        <i class="fas fa-bars menuHam"></i>
-      </a>
-      <nav class="main-navbar">
-        <ul class="left-navbar">
-          <li><a href="#">Ofertas</a></li>
-          <li><a href="#">Tiendas Oficiales</a></li>
-          <li><a href="#">Vender</a></li>
-          <li><a href="#">Ayuda</a></li>
-        </ul>
-        <ul class="right-navbar">
-          <li>
-            <a href="/register"
-              >Creá tu cuenta <i class="fas fa-id-card"></i
-            ></a>
-          </li>
-          <li>
-            <a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a>
-          </li>
-          <li>
-            <a href="#">Mis compras <i class="fas fa-shopping-basket"></i></a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <section class="banner">
-      <img
-        src="/images/img-home-banner.jpg"
-        width="100%"
-        alt="Banner de ofertas"
-      />
-    </section>
-    <main>
-      <form class="form-reg" action="" method="GET">
-        <section>
-          <h4>Datos de usuario</h4>
-          <label for="">Nombre y apellido</label>
-          <input type="text" minlength="4" name="" id="" required=true/>
-          <!-- Usuario -->
-          <label for="">Usuario</label>
-          <input type="text" name="" id="" />
-          <!-- Fecha de nacimiento -->
-          <label for="">Fecha de nacimiento</label>
-          <input type="date" name="" id="" />
-          <!-- Domicilio -->
-          <label for="">Domicilio</label>
-          <input type="text" src="" alt="" />
-          <!-- Perfil de usuario -->
-          <label for="">Perfil de usuario</label>
-          <input type="text" name="" id="" />
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">        
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <title>Registrate en Mercado Liebre</title>
+    </head>
+    <body>
+      <header>
+        <div class="header-top-bar">                
+            <div class="header-top-logo-left">
+                <a href="/">
+                    <img src="images/logo-mercado-liebre.svg" alt="Logo de MercadoLiebre" class="header-logo">
+                </a> 
+            </div>
+            <form action="/search" method="POST" class="header-top-form">
+                <input type="search" name="searchbar" placeholder="Buscar productos, marcas y más" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Buscar productos, marcas y más'" class="input">
+                <button type="submit" class="submit">
+                    <i class="fa fa-search"></i>
+                </button>                    
+            </form>                
+            <h2 class="header-top-promo-right">
+                <i class="fas fa-hand-holding-usd"></i>
+                Comprá en cuotas y sin tarjeta de crédito
+            </h2>
+        </div>
+        <div class="header-bottom-bar">
+            <nav class="header-navbar-main">
+                <ul class="header-bottom-navbar-left">
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Tiendas Oficiales</a></li>
+                    <li><a href="#">Vender</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+                <ul class="header-bottom-navbar-right">
+                    <li><a href="/register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
+                    <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
+                    <li><a href="#">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-bottom-burger-menu">
+            <i class="fa fa-bars burger"></i>
+        </div>
+      </header>
+      <main>
+        <div class="register-main-show">
+          <section class="register-main-top-label">
+            <label>Completá tus datos</label>
+          </section>        
+          <section class="register-main">
+            <!-- Formulario -->
+            <form action="" method="POST" class="register-main-form">
+              <div class="register-main-shadow">
+                <div class="register-main-text">
+                  <!-- nombre y apellido -->
+                  <article class= "register-main-article">                                    
+                    <div class="register-main-label">
+                      <label>Ingresá tu nombre y apellido(*)</label>
+                    </div>
+                    <div class="register-main-label">
+                      <input class="register-main-inputBox" type="text" name="nameAndSurname" minlength="5" required placeholder="Nombre y apellido" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nombre y apellido'" class="input">
+                    </div>
+                  </article>
+                  <!-- nombre de usuario -->
+                  <article class= "register-main-article">                  
+                    <div class="register-main-label">
+                      <label>Elegí un nombre de usuario(*)</label>
+                    </div>     
+                    <div class="register-main-label">
+                      <input class="register-main-inputBox" type="text" name="username" placeholder="Elegí un usuario" required  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Elegí un usuario'" class="input">
+                    </div>
+                  </article>
+                  <!-- email -->
+                  <article class= "register-main-article"> 
+                    <div class="register-main-label">
+                      <label>Ahora tu email(*)</label>
+                    </div>             
+                    <div>                       
+                      <input class="register-main-inputBox" type="email" name="email" placeholder="Ingresá un email" required  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ingresá un email'" class="input">
+                    </div>
+                  </article>
+                  <!-- fecha de nacimiento -->
+                  <article class= "register-main-article">   
+                    <div class="register-main-label">             
+                      <label>Tu fecha de nacimiento(*)</label>
+                    </div>  
+                    <div>
+                      <input class="register-main-inputBox" type="date" name="birthday" placeholder="dd/mm/yyyy" required  onfocus="this.placeholder = ''" onblur="this.placeholder = 'dd/mm/yyyy'" class="input">
+                    </div>
+                  </article> 
+                  <!-- domicilio -->
+                  <article class= "register-main-article">
+                    <div class="register-main-label">
+                      <label>Domicilio en donde vivís(*)</label>
+                    </div>
+                    <div>         
+                      <input class="register-main-inputBox" type="text" name="address" placeholder="Decinos tu domicilio" required  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Decinos tu domicilio'" class="input">
+                    </div> 
+                  </article>
+                  <!-- perfil -->
+                  <article class= "register-main-article">
+                    <div class="register-main-label">               
+                      <label>Tu perfil de usuario</label>
+                    </div> 
+                      <div class="register-main-radioOptions"> 
+                        <div class="register-main-profile">         
+                          <input type="radio" id="buyer" name= "profile" value= "profile-buyer" class="register-main-optionselect">
+                          <p>Comprador</p>
+                        </div>
+                        <div class="register-main-profile">
+                          <input type="radio" id="seller" name= "profile" value= "profile-seller" class="register-main-optionselect">
+                          <p>Vendedor</p>
+                        </div>
+                      </div> 
+                  </article>
+                  <!-- categorías -->
+                  <article class= "register-main-article">
+                    <div class="register-main-label">              
+                      <label>Intereses que tengas</label>
+                    </div>
+                      <div class="register-main-checkOptions">
+                        <div class="register-main-checkbox">
+                          <input type="checkbox" name=electro class="register-main-checkbox-icon">
+                          <p>Electro</p>
+                        </div>
+                        <div class="register-main-checkbox">                  
+                          <input type="checkbox" name=moda class="register-main-checkbox-icon">
+                          <p>Moda</p>
+                        </div>
+                        <div class="register-main-checkbox">
+                          <input type="checkbox" name=hogar class="register-main-checkbox-icon">
+                          <p>Hogar</p>
+                        </div>
+                        <div class="register-main-checkbox">
+                          <input type="checkbox" name=jugueteria class="register-main-checkbox-icon">
+                          <p>Juguetería</p>
+                        </div>
+                        <div class="register-main-checkbox">
+                          <input type="checkbox" name=vidaSana class="register-main-checkbox-icon">
+                          <p>Vida Sana</p>
+                        </div>
+                      </div>
+                  </article> 
+                  <!-- foto type="file" accept=".jpg" -->             
+                  <article class= "register-main-article">
+                    <div class="register-main-label">                
+                      <label>Cargá tu foto</label>
+                    </div>
+                    <div class="register-main-loadPhoto">
+                      <input type="file" name=photo accept=".jpg .png">
+                    </div>
+                  </article>
+                  <!-- contraseña --> 
+                  <article class= "register-main-article">
+                    <div class="register-main-label">
+                    <label>Escribí una contraseña(*)</label>
+                    </div>
+                    <div>
+                      <input class="register-main-inputBox" type="password" name="password" placeholder="Mínimo de 5 caracteres" required  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mínimo de 5 caracteres'" minlength="5" class="input">
+                    </div>
+                  </article>
+                  <!-- volver a escribir contraseña -->
+                  <article class= "register-main-article">
+                    <div class="register-main-label">
+                      <label>Volvé a escribir la contraseña(*)</label>
+                    </div>
+                    <div>
+                      <input class="register-main-inputBox" type="password" name="recheckPassword" placeholder="Volvé a escribirla" required  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Volvé a escribirla'" minlength="5" class="input">
+                    </div>
+                  </article>
+                </div>
+              </div> 
+              <!-- botón de registrarse -->           
+              <div class="register-main-sendButton">            
+                <button type="submit">Continuar</button>
+              </div>              
+            </form>
+          </section>
+        </div>
+      </main>
+      <footer>            
+        <section class="last">
+            <article>
+                <div class="promotion">
+                    <div class="fa-footer">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Pagá con tarjeta o en efectivo</h3> 
+                    <p>Con Mercado Liebre Cash tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!.</p>
+                </div>
+            </article>
+            <article>
+                <div class="promotion">
+                    <div class="fa-footer">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Envío gratis desde los $2.500</h3>     
+                    <p>Solo por estar registrado en Mercado Liebre tenés envíos gratis en miles de productos. Es un beneficio de Mercado Puntos.</p>  
+                </div>
+            </article>
+            <article>
+                <div class="promotion">
+                    <div class="fa-footer">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Seguridad de principio a fin</h3>
+                    <p>¿No te gusta?¡Devolvelo! En Mercado Liebre no hay nada que no puedas hace porque estás siempre protegid@.</p> 
+                </div>
+            </article>            
         </section>
-        <section class="categoria">
-          <h4>Categoria de interes</h4>
-          <!-- categoria de interes -->
-          <input type="checkbox" name="" id="" />
-          <label for="">Electro</label><br>
-          <input type="checkbox" name="" id="" />
-          <label for="">Moda</label>
-          <br>
-          <input type="checkbox" name="" id="" />
-          <label for="">Hogar</label>
-          <br>
-          <input type="checkbox" name="" id="" />
-          <label for="">Juguete</label>
-          <br>
-          <input type="checkbox" name="" id="" />
-          <label for="">vida Sana</label>
-          <br>
-        </section>
-        <br>
-        <section>
-          <!-- Foto de usuario -->
-          <label for="">Foto</label>
-          <input type="file" src="" alt=""/>
-        </section>
-        <section>
-          <h4>Contraseña</h4>
-          <!-- Contraseña -->
-          <label for="">Password</label>
-          <input type="password" name="" id="" />
-          <!-- Confirmar contraseña -->
-          <label for="">Confirmar Password</label>
-          <input type="password" name="" id="" />
-        </section>
-        <br>
-        <!-- boton Enviar -->
-        <button type="submit">Enviar</button>
-        <!-- boton borrar -->
-        <button type="reset">Borrar</button>
-      </form>
-    </main>
-  </body>
+        <p class="copyright">Copyright © 1999-2021 Mercado Liebre S.R.L.</p> 
+    </footer>
+    </body>
 </html>
