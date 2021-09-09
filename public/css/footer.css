@@ -82,9 +82,9 @@ footer section .copyright{
         transform: scale(1.4);
         transition: 0.2s;
     }
-    footer section article .promotion .fa-footer i:hover{       
+    footer section article .promotion .fa-footer i:hover {
         background-color: transparent;
-        color: red;
+        color: #0c2161;
         font-size: 2em;
         height: 40px;
         margin: 60px 0px 0px 0px;
