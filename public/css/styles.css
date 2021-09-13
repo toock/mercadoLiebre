@@ -1,4 +1,3 @@
-/* Including one css file into other */
 @import "home.css";
 @import "login.css";
 @import "register.css";
@@ -7,19 +6,18 @@
 
 
 
-/*General*/
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder { 
     color: grey;
     font-weight: normal;  
-    opacity: 1; /* Firefox */
+    opacity: 1; 
   }
   
-::-ms-input-placeholder { /* Internet Explorer 10-11 */
+::-ms-input-placeholder { 
     color: grey;
     font-weight: normal; 
 }
   
-::-ms-input-placeholder { /* Microsoft Edge */
+::-ms-input-placeholder { /
     color: grey;
     font-weight: normal; 
 }
@@ -37,7 +35,6 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;    
-    /*border: 1px solid red;*/
 }
 
 h3{ padding-top: 35px;
@@ -65,15 +62,9 @@ section.banner img{
 
 
 
-/*-----------------Media Queries-----------------*/
-/*--------------------Tablet--------------------*/
-
+/*tablet*/
 
 @media (min-width: 361px){
-
-    
-    /*General for tablets*/ 
-
 
     h3{ padding-top: 35px;
         padding-left: 10px;   
@@ -84,16 +75,9 @@ section.banner img{
 
 }
 
-
-
-/*--------------------Desktop--------------------*/
-
+/*Desktop*/
 
 @media (min-width: 769px){
-
-
-    /*General for desktops*/ 
-
 
     h3{ padding-top: 35px;
         padding-left: 10px;   

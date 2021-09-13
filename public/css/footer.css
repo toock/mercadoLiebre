@@ -1,6 +1,3 @@
-/*--------------------Mobile First--------------------*/
-
-
 /*Footer*/
 
 
@@ -38,12 +35,10 @@ footer section .copyright{
 }
 
 
-/*--------------------Tablet--------------------*/
+/*Tablet*/
 
 
 @media (min-width: 361px){
-
-    /*Footer for tablets*/  
 
     footer section article .promotion .fa-footer i{
         transform: scale(1.2);
@@ -52,13 +47,10 @@ footer section .copyright{
 }
 
 
-/*--------------------Desktop--------------------*/
+/*Desktop*/
 
 
 @media (min-width: 769px){
-
-
-    /*Footer for desktops*/
 
     footer{    
         width: 89%;

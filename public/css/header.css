@@ -1,7 +1,3 @@
-/*--------------------Mobile First--------------------*/
-
-/*Header*/
-
 header{    
     background-color: #EAC926;
     padding: 10px;
@@ -71,13 +67,11 @@ header .header-bottom-burger-menu i{
     max-width: 40px; 
 }
 
-/*--------------------Tablet--------------------*/
+/*Tablet*/
 
 
 @media (min-width: 361px){
 
-    /*Header for tablets*/   
-     
     header .header-top-bar {                  
         flex-wrap: nowrap;
         justify-content:space-between;
@@ -137,12 +131,11 @@ header .header-bottom-burger-menu i{
 }
 
 
-/*--------------------Desktop--------------------*/
+/*Desktop*/
 
 
 @media (min-width: 769px){
 
-    /*Header for desktops*/
     header .header-top-bar{
         max-width: 80%;
     }
