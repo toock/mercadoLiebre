@@ -8,7 +8,7 @@ app.use('/', express.static(__dirname + '/public'));
 //});
 
 app.listen(process.env.PORT || 3000, function (){
-    console.log('servidor corriendo en el puerto 3000')
+    console.log('Servidor funcionando en http://localhost:3000')
 })
 
 
